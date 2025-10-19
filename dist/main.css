@@ -10670,8 +10670,24 @@ body * {
     border-radius: 4px;
     overflow: hidden;
     box-shadow: 0px 2px 3px rgba(255,255,255,.15);
-    border: 1px solid rgba(0,0,0,0)
+    border: 1px solid rgba(0,0,0,0);
+
+
+    top: -400%; /* Це зміщення виносить блок за межі екрана */
+    left: 0;
+    opacity: 0; /* Це робить блок прозорим */
 }
+
+
+.change_lang:hover .items {
+    top: 100%; /* Переміщуємо список униз (нижче батьківського елемента) */
+    opacity: 1; /* Робимо список повністю видимим */
+    
+    /* Якщо потрібно, додайте також рамку для ідентичності зі станом .active */
+    border: 1px solid #d2d2d7; 
+    z-index: 50;
+}
+
 
 .change_lang .items span {
     color: #1d70c9
@@ -11868,3 +11884,6 @@ a.button span {
         padding-left: 5px
     }
 }
+
+
+
